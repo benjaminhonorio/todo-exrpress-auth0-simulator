@@ -29,7 +29,8 @@
   },
   "license": "Unlicense",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "sim": "PORT=4000 npx auth0-simulator --standalone"
   },
   "dependencies": {
     "connect-ensure-login": "^0.1.1",
@@ -48,5 +49,15 @@
     "passport-openidconnect": "^0.1.1",
     "pluralize": "^8.0.0",
     "sqlite3": "^5.0.2"
+  },
+  "auth0Simulator": {
+    "domain": "localhost:4400",
+    "clientID": "YOUR_AUTH0_CLIENT_ID",
+    "clientSecret": "MY_AUTH_SECRET",
+    "audience": "http://localhost:3000/",
+    "scope": "profile"
+  },
+  "devDependencies": {
+    "@simulacrum/auth0-simulator": "^0.7.0"
   }
 }
